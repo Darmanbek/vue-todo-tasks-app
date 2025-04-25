@@ -1,0 +1,5 @@
+export { default as DocumentationIcon } from "./icon-documentation.vue"
+export { default as ToolingIcon } from "./icon-tooling.vue"
+export { default as EcosystemIcon } from "./icon-ecosystem.vue"
+export { default as CommunityIcon } from "./icon-community.vue"
+export { default as SupportIcon } from "./icon-support.vue"
