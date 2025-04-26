@@ -1,16 +1,17 @@
-<script lang="ts" setup>
-import { TaskCard } from "@/components/shared"
+<script lang="ts" async setup>
+import { TaskCard, TaskModal } from "@/components/shared"
 </script>
 
 <template>
+	<TaskModal />
 	<el-row :gutter="20" style="row-gap: 20px">
-		<el-col :xs="24" :md="12" :xxl="8">
+		<el-col :xs="24" :md="12" :xl="8">
 			<TaskCard />
 		</el-col>
-		<el-col :xs="24" :md="12" :xxl="8">
+		<el-col :xs="24" :md="12" :xl="8">
 			<TaskCard />
 		</el-col>
-		<el-col :xs="24" :md="12" :xxl="8">
+		<el-col :xs="24" :md="12" :xl="8">
 			<TaskCard />
 		</el-col>
 	</el-row>

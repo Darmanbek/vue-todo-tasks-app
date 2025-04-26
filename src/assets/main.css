@@ -1,1 +1,10 @@
 @import "./base.css";
+
+html:not(.dark) .el-menu-item.is-active {
+	background-color: var(--el-menu-hover-bg-color);
+}
+
+html.dark .el-menu-item.is-active {
+	background-color: var(--el-color-primary);
+	color: var(--el-text-color);
+}

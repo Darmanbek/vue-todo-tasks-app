@@ -36,24 +36,24 @@ const isCompleted = ref(false)
 					style="width: 100%"
 					:spacer="h(ElDivider, { direction: 'vertical' })"
 				>
-					<span>
+					<span class="action-switch">
 						<el-switch
 							:active-action-icon="Check"
 							:inactive-action-icon="Close"
 							v-model="isCompleted"
 						/>
 					</span>
-					<span>
-						<el-icon :size="24">
+					<span class="action-icon">
+						<el-icon :size="26">
 							<StarFilled />
 						</el-icon>
 					</span>
-					<span>
+					<span class="action-icon">
 						<el-icon :size="20">
 							<DeleteFilled />
 						</el-icon>
 					</span>
-					<span>
+					<span class="action-icon">
 						<el-icon :size="20">
 							<Edit />
 						</el-icon>
@@ -76,6 +76,20 @@ const isCompleted = ref(false)
 	display: flex;
 	flex-direction: column;
 	align-items: start;
+}
+
+.action-switch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.action-icon {
+	cursor: pointer;
+
+	&:hover {
+		color: var(--el-color-primary);
+	}
 }
 </style>
 -

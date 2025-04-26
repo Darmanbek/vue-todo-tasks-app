@@ -1,5 +1,10 @@
 <script lang="ts" setup>
+import { useModalStore } from "@/stores"
 import { Bell, Calendar, Checked, Failed, Menu } from "@element-plus/icons-vue"
+import { useRouter } from "vue-router"
+
+const router = useRouter()
+const { toggleOpen } = useModalStore()
 
 const menuItems = [
 	{
@@ -31,28 +36,21 @@ const menuItems = [
 </script>
 
 <template>
-	<el-aside width="256px" class="aside">
-		<div class="top">
-			<el-text tag="h3" class="title">СПИСОК-ДЕЛ</el-text>
-			<el-button type="primary">Добавить новую задачу</el-button>
-		</div>
-		<el-menu style="border-right: 0">
-			<el-menu-item v-for="item in menuItems" :key="item.key" :index="item.key">
-				<el-icon>
-					<component :is="item.icon" />
-				</el-icon>
-				<span>{{ item.label }}</span>
-			</el-menu-item>
-		</el-menu>
-	</el-aside>
+	<div class="top">
+		<el-text tag="h3" class="title">СПИСОК-ДЕЛ</el-text>
+		<el-button type="primary" @click="toggleOpen">Добавить новую задачу</el-button>
+	</div>
+	<el-menu style="border-right: 0" @select="(item: string) => router.push(item)">
+		<el-menu-item v-for="item in menuItems" :key="item.key" :index="item.key">
+			<el-icon>
+				<component :is="item.icon" />
+			</el-icon>
+			<span>{{ item.label }}</span>
+		</el-menu-item>
+	</el-menu>
 </template>
 
 <style scoped>
-.aside {
-	background: var(--el-bg-color-overlay);
-	box-shadow: var(--el-box-shadow-light);
-}
-
 .top {
 	display: flex;
 	flex-direction: column;
