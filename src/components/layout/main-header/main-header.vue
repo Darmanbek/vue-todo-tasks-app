@@ -33,7 +33,7 @@ const langOptions = [
 				title="Незавершенные задачи"
 				popper-class="popover"
 				:show-arrow="false"
-				width="220px"
+				width="180px"
 				trigger="click"
 				placement="bottom-end"
 			>
@@ -86,5 +86,9 @@ const langOptions = [
 	display: flex;
 	align-items: center;
 	gap: 20px;
+}
+
+:global(.popover .el-popover__title) {
+	font-size: 14px !important;
 }
 </style>
