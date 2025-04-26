@@ -1,6 +1,11 @@
 <script lang="ts" setup>
+import logo from "@/assets/logo.svg"
 import { Moon, Sunny, UserFilled } from "@element-plus/icons-vue"
 import { useDark, useToggle } from "@vueuse/core"
+
+const openLink = () => {
+	window.open("https://github.com/Darmanbek", "_blank")
+}
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
@@ -30,6 +35,11 @@ const toggleDark = useToggle(isDark)
 		</div>
 		<el-progress :percentage="25" :show-text="false" />
 	</div>
+	<el-button type="success" plain class="copyright" @click="openLink">
+		Сделано с
+		<el-image class="logo" :src="logo" alt="Vue" />
+		автором
+	</el-button>
 </template>
 
 <style scoped>
@@ -80,6 +90,16 @@ const toggleDark = useToggle(isDark)
 		display: flex;
 		gap: 12px;
 		justify-content: space-between;
+	}
+}
+
+.copyright {
+	margin-top: auto;
+
+	.logo {
+		width: 16px;
+		height: 16px;
+		margin-inline: 2px;
 	}
 }
 </style>
