@@ -8,11 +8,30 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AsideLeft: typeof import('./src/components/layout/aside-left.vue')['default']
+    AsideRight: typeof import('./src/components/layout/aside-right.vue')['default']
+    BellPopoverTaskList: typeof import('./src/components/layout/main-header/bell-popover-task-list.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
+    ElBadge: typeof import('element-plus/es')['ElBadge']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElFooter: typeof import('element-plus/es')['ElFooter']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElMain: typeof import('element-plus/es')['ElMain']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElPopover: typeof import('element-plus/es')['ElPopover']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
+    ElSpace: typeof import('element-plus/es')['ElSpace']
+    ElText: typeof import('element-plus/es')['ElText']
+    Header: typeof import('./src/components/layout/header.vue')['default']
+    MainFooter: typeof import('./src/components/layout/main-footer.vue')['default']
+    MainHeader: typeof import('./src/components/layout/main-header/main-header.vue')['default']
+    PopoverTitle: typeof import('./src/components/layout/main-header/popover-title.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Title: typeof import('./src/components/layout/main-header/title.vue')['default']
   }
 }

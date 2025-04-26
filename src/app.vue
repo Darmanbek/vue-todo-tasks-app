@@ -1,26 +1,21 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router"
+<script lang="ts" setup>
+import { RouterView } from "vue-router"
+import { AsideLeft, AsideRight, Footer, Header } from "./components/layout"
 </script>
 
 <template>
 	<el-config-provider>
 		<div class="common-layout dark">
 			<el-container>
-				<el-aside width="256px">Aside</el-aside>
+				<AsideLeft />
 				<el-main class="main">
-					<header>
-						<img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-						<div class="wrapper">
-							<nav>
-								<RouterLink to="/">Home</RouterLink>
-								<RouterLink to="/about">About</RouterLink>
-							</nav>
-						</div>
-					</header>
-					<RouterView />
+					<Header />
+					<div class="inner-main">
+						<RouterView />
+					</div>
+					<Footer />
 				</el-main>
-				<el-aside width="256px">Aside</el-aside>
+				<AsideRight />
 			</el-container>
 		</div>
 	</el-config-provider>
@@ -30,5 +25,15 @@ import { RouterLink, RouterView } from "vue-router"
 .main {
 	padding: 20px;
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.inner-main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 </style>
