@@ -20,7 +20,7 @@ const isCompleted = ref(false)
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cumque earum non odit
 					perspiciatis quae rerum. Alias minus nemo optio?
 				</el-text>
-				<el-tag effect="dark" style="font-size: 16px; margin-top: 20px" icon>
+				<el-tag effect="dark" type="warning" style="font-size: 16px; margin-top: 20px" icon>
 					<el-icon>
 						<Calendar />
 					</el-icon>
