@@ -2,7 +2,7 @@
 
 <template>
 	<el-footer class="footer">
-		<h3>Список дел</h3>
+		<el-text tag="h3" class="title">СПИСОК-ДЕЛ</el-text>
 	</el-footer>
 </template>
 
@@ -17,12 +17,11 @@
 	border-radius: var(--el-border-radius-base);
 	text-align: center;
 	height: auto;
-	box-shadow: var(--el-box-shadow-light);
 	background: var(--el-bg-color-overlay);
-	border: 1px solid var(--el-border-color-light);
+	box-shadow: var(--el-box-shadow-light);
 }
 
-h3 {
+.title {
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;

@@ -36,4 +36,8 @@ import { AsideLeft, AsideRight, Footer, Header } from "./components/layout"
 	flex-direction: column;
 	gap: 20px;
 }
+
+::v-deep(.el-card) {
+	box-shadow: none;
+}
 </style>

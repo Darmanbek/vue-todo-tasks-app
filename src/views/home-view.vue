@@ -1,10 +1,19 @@
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import { TaskCard } from "@/components/shared"
+</script>
 
 <template>
-	<div class="home">
-		<h1>This is an home page</h1>
-		<el-card> Hello </el-card>
-	</div>
+	<el-row :gutter="20" style="row-gap: 20px">
+		<el-col :xs="24" :md="12" :xxl="8">
+			<TaskCard />
+		</el-col>
+		<el-col :xs="24" :md="12" :xxl="8">
+			<TaskCard />
+		</el-col>
+		<el-col :xs="24" :md="12" :xxl="8">
+			<TaskCard />
+		</el-col>
+	</el-row>
 </template>
 
 <style scoped></style>

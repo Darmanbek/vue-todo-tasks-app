@@ -4,6 +4,7 @@ import { ref } from "vue"
 import { default as BellPopoverTaskList } from "./bell-popover-task-list.vue"
 
 const langValue = ref("")
+const searchValue = ref("")
 
 const langOptions = [
 	{
@@ -26,7 +27,13 @@ const langOptions = [
 
 <template>
 	<el-header class="header">
-		<el-input class="input" size="large" placeholder="Искать задачу" :suffix-icon="Search" />
+		<el-input
+			v-model="searchValue"
+			class="input"
+			size="large"
+			placeholder="Искать задачу"
+			:suffix-icon="Search"
+		/>
 		<el-text size="large" class="text">2025, Апр. 26</el-text>
 		<div class="flex">
 			<el-popover
